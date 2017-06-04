@@ -1,0 +1,83 @@
+\documentclass [DIN,DIV=14,pagenumber=false,parskip=full,fromalign=left,%
+fontsize=12pt,%
+subject=beforeopening] {scrartcl} 
+%\documentclass [DIN,paper=a4,DIV=15,pagenumber=false,parskip=half,fromalign=left,fromphone=true,fromemail=true,fromlogo=true,fromrule=false] {scrlttr2} 
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\title{Einführung in die Softwareentwicklung \\
+Übungsblatt 1}
+\author{Patrick Müller}
+\date{\today}
+
+% Kopf- und Fußzeile 
+%\usepackage[ 
+%  headsepline, 
+%  footsepline,plainfootsepline, 
+%  markcase=upper, 
+%  automark, 
+%  ]{scrlayer-scrpage} 
+  
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}
+%\fancyhead[LO]{Einführung in die Softwareentwicklung}
+%\fancyhead[RO]{Patrick Müller}
+\rhead{Patrick Müller}
+\lhead{Einführung in die Softwareentwicklung}
+
+
+\begin{document}
+\thispagestyle{fancy}
+\maketitle
+%\hline
+
+\section*{Aufgabe 1}
+\begin{itemize}
+\item Versionsverwaltungssysteme sind dafür da Unterschiede an z.B Code von Programmen, aber auch an anderen Dateien zu bemerken und so zu archivieren, dass man an verschiedenen Versionen der Datei arbeiten kann. Dies ist sehr hilfreich für die Softwareentwicklung da so mehrere Personen auf dem gleichen Stand arbeiten können und auch verschiedene Versonen des selben Programms parallel erstellen können. Das Repository ist der Ort an dem die Dateien aufbewahrt werden. Von hier läd jeder Benutzer die verschiedenen Versionen und stellt dort auch seine Änderungen ein.
+\end{itemize}
+
+\begin{itemize}
+\item Der Hauptunterschied zwischen Git und SVN ist das bei Git jeder Benutzer eine lokale Kopie des kompletten Repositorys hat und an dieser arbeitet, während bei SNV alle Daten allein auf dem Server liegen. Beide Arten der Versionsverwaltung haben ihre Vorteile. Dadurch das locale Kopien vorliegen lässt sich viel schneller damit arbeiten und Veränderungen durchführen. Wenn alle Datei auf dem Server liegen ist das aber von Vorteil wenn man mit großen Daten zutun hat, da diese nicht extra heruntergeleaden werden müssen.
+\end{itemize}
+
+\section*{Aufgabe 2}
+\begin{itemize}
+\item git clone:
+	Dieser Befehl erzeugt eine locale Kopie auf dem eigenen Rechner (dem angegebenen Repository).
+\item git add:
+	Dieser Befehl schreibt die Änderungen in die {\em staging area}.
+\item git commit:
+	Dieser Befehl schreibt die Änderungen an den Dateien die zuvor mit {\em git add} aufgerufen wurden dann wirklich in das Repository auf deinen Festblatte.
+\item git status:
+	Dieser Befehl zeigt an welche Dateien verändert wurden und welche markiert wurden um mit {\em git commit} aufgerufen werden zu können.
+\item git fetch:
+	Dieser Befehl holt alle Dateien vom Repoitory (des Servers), die nicht im lokalen Repository sind.
+\item git merge:
+	Dieser Befehl lässt mehrere Zweige in einen Zweig zusammenlaufen und macht daraus einen neuen commit.
+\item git diff:
+	Dieser Befehl zeigt die Unteschiede zwischen den Zweiggen und Dateien.
+\item git push:
+	Dieser Befehl stellt alle Dateien die wirklich verändert wurden (also vorher {\em git add} und {\git commit}) auf das {\em remote repository}. 
+\item git pull:
+	Dieser Befehl ist das selbe wie {\em git fetch git merge}.
+\item gitk:
+	Dieser Befehl öffnet eine graphische Tcl/TK Oberfläsche für git (repository browser).
+\item git rebase:
+	Dieser Befehl führt genauso wie merge Zweige zusammen, jedoch behält dieser Befehl im Gegensatz zu {\em git merge} nicht die history des von beiden Zweigen sondern er wirft sie zu einem Zweig zusammen. Dadurch bekommt man eine viel sauberere history. 
+\item git gui:
+	Dieser Befehl öffnet eine portable graphisch Oberfläsche für git.
+\end{itemize}
+
+\section*{Aufgabe 3}
+\begin{enumerate}
+\item git add
+\item git commit
+\item git push
+\item git fetch
+\item git checkout
+\item git pull
+\end{enumerate}
+
+\end{document}
